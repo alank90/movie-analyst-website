@@ -1,0 +1,21 @@
+{
+  "name": "movieanalyst-website",
+  "version": "1.0.0",
+  "description": "The Movie-Analyst website to go with the movie-analyst api.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Web",
+    "Site",
+    "Frontend"
+  ],
+  "author": "Alan Killian",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "superagent": "^3.6.3"
+  }
+}
