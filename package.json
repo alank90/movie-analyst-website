@@ -11,6 +11,10 @@
     "Site",
     "Frontend"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alank90/movie-analyst-website.git"
+  },
   "author": "Alan Killian",
   "license": "ISC",
   "dependencies": {
