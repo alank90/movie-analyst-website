@@ -35,13 +35,9 @@ function getAccessToken(req, res, next) {
     .post('https://movieapi.auth0.com/oauth/token')
     .send(authData)
     .end(function(err, res) {
-        if(req.body.access_token) {
-            req.access_token = res.body.access_token;
-            next();
-        } else {
-            res.send(401, 'Unauthorized');
-        }
-    });
+        req.access_token = res.body.access_token;
+        next();
+      });
 }
 
 // The homepage route of our application does not interface with the MovieAnalyst API and is always accessible. 
