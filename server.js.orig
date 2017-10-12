@@ -23,7 +23,7 @@ const authData = {
     client_id: NON_INTERACTIVE_CLIENT_ID,
     client_secret: NON_INTERACTIVE_CLIENT_SECRET,
     grant_type: 'client_credentials',
-    audience: 'https://movieanalyst.com'
+    audience: 'movieanalyst'
 };
 
 // We’ll create a middleware to make a request to the oauth/token Auth0 API with our authData we created earlier.
