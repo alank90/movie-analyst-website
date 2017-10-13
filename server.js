@@ -33,10 +33,11 @@ const authData = {
 function getAccessToken(req, res, next) {
     request
         .post('https://movieapi.auth0.com/oauth/token')
+        .set('Content-Type', 'application/json')
         .send(authData)
         .end(function(err, res) {
             req.access_token = res.body.access_token;
-            next();
+        next();
         });
 }
 
