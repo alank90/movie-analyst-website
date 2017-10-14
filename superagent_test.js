@@ -17,7 +17,8 @@ function getAccessToken(req, res, next) {
         .set('Content-Type', 'application/json')
         .send(authData)
         .end(function(err, res) {
-            console.log(res.body.token_type);
+            access_token = res.body.access_token;
+            console.log(access_token);
           });
 }
 
