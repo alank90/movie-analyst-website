@@ -59,7 +59,9 @@ app.get('/movies', getAccessToken, function (req, res) {
             if (data.status == 403) {
                 res.send(403, '403 Forbidden');
             } else {
+                console.log(data.body);
                 const movies = data.body;
+                console.log('Movies is: ' + movies);
                 res.render('movies', { movies: movies });
             }
         });
