@@ -54,7 +54,7 @@ app.get('/', function (req, res) {
 app.get('/movies', getAccessToken, function (req, res) {
     request
         .get('http://localhost:8080/movies')
-        .set('Authorization', 'Bearer' + req.access_token)
+        .set('Authorization', 'Bearer ' + req.access_token)
         .end(function (err, data) {
             if (data.status == 401) {
                 res.status(401).send(err);
