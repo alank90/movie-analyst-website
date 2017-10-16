@@ -56,8 +56,8 @@ app.get('/movies', getAccessToken, function (req, res) {
         .get('http://localhost:8080/movies')
         .set('Authorization', 'Bearer' + req.access_token)
         .end(function (err, data) {
-            if (data.status == 403) {
-                res.send(403, '403 Forbidden');
+            if (data.status == 401) {
+                res.status(401).send(err);
             } else {
                 console.log(data.body);
                 const movies = data.body;
