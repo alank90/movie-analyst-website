@@ -68,7 +68,7 @@ app.get('/movies', getAccessToken, function (req, res) {
 // The process will be the same for the remaining routes. We’ll make sure to get the acess_token first and then make the request to our 
 // API to get the data.The key difference on the authors route, is that for our client, we’re naming the route /authors, but our API 
 // endpoint is /reviewers. Our route on the client does not have to match the API endpoint route.
-app.get('/authors', getAccessToken, function (res, req) {
+app.get('/authors', getAccessToken, function (req, res) {
     request
         .get('http://localhost:8080/reviewers')
         .set('Authorization', 'Bearer ' + req.access_token)
