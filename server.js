@@ -112,5 +112,5 @@ app.get('/pending', getAccessToken, function (req, res) {
 // Our MovieAnalyst Website will listen on port 3000. Feel free to change this as you see fit, just know that you can’t
 // have multiple processes listening on the same port.
 app.listen(3000, function () {
-    console.log('Movie-analyst Web App listening on port 3000');
+    console.log('Movie-Analyst Web App listening on port 3000');
 });
