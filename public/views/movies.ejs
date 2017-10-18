@@ -6,34 +6,42 @@
 </head>
 
 <body>
-    <h1>Test for ejs</h1>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>
+                <span class="glyphicon glyphicon-bullhorn"></span>
+            </h1>
+            <h2>Latest Movie Reviews</h2>
+        </div>
 
-    <div class="row">
-        <!-- This is the EJS syntax to create a loop -->
-        <% movies.forEach(function(movie, index) { %>
-            <div class="col-sm-4">
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <%= movie.title %> (
-                                <%= movie.release %>)</h3>
-                    </div>
-                    <div class="panel-body text-center">
-                        <h1>
-                            <%= movie.score %>
-                                <small>/ 10</small>
-                        </h1>
-                    </div>
-                    <div class="panel-footer small">
-                        <p>By
-                            <%= movie.reviewer %> for
-                                <%= movie.publication %>
+        <div class="row">
+            <!-- This is the EJS syntax to create a loop -->
+            <% movies.forEach(function(movie, index) { %>
+                <div class="col-sm-4">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <%= movie.title %> (
+                                    <%= movie.release %>)</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <h1>
+                                <%= movie.score %>
+                                    <small>/ 10</small>
+                            </h1>
+                        </div>
+                        <div class="panel-footer small">
+                            <p>By
+                                <%= movie.reviewer %> for
+                                    <%= movie.publication %>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- We’ll also have to close our loop -->
-            <% }) %>
+                <!-- We’ll also have to close our loop -->
+                <% }) %>
+        </div>
     </div>
+    <!-- .container  -->
 </body>
 
 </html>

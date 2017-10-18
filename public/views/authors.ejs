@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <% include ./partials/head %>
+<% include ./partials/head %>
 
     <body>
         <div class="container">
@@ -10,7 +10,7 @@
                 </h1>
                 <h2>Our Movie Critics</h2>
             </div>
-            
+
             <div class="row">
                 <% authors.forEach(function(author, index) { %>
                     <div class="col-sm-4">
@@ -24,12 +24,16 @@
                                 <img src="<%= author.avatar %>" alt="Avatar" class="img-circle">
                             </div>
                             <div class="panel-footer small">
-                                <p>Writes for <%= author.publication %></p>
+                                <p>Writes for
+                                    <%= author.publication %>
+                                </p>
                             </div>
                         </div>
                     </div>
-                <% }) %>  <!-- end forEach -->
+                    <% }) %>
+                        <!-- end forEach -->
             </div>
         </div>  <!-- .container -->
     </body>
+
 </html>

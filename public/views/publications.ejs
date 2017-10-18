@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <% include ./partials/head %>
+<% include ./partials/head %>
 
-<body>
-    <div class="container">
-        <div class="jumbotron text-center">
-            <h1>
-                <span class="glyphicon glyphicon-tower"></span>
-            </h1>
-            <h2>Our Publication Partners</h2>
-        </div>
+    <body>
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>
+                    <span class="glyphicon glyphicon-bullhorn"></span>
+                </h1>
+                <h2>Our Publication Partners</h2>
+            </div>
 
-        <div class="row">
-            <% publications.forEach(function(publication, index) { %>
-                <div class="col sm-4">
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                <%= publication.name %>
-                            </h3>
-                        </div>
-                        <div class="panel-body text-center">
-                            <h1><span class="glyphicon <%= publication.avatar %>"></span></h1>
+            <div class="row">
+                <% publications.forEach(function(publication, index) { %>
+                    <div class="col sm-4">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <%= publication.name %>
+                                </h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <h1>
+                                    <span class="glyphicon <%= publication.avatar %>"></span>
+                                </h1>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <% }) %>  <!-- end forEach  -->
-        </div>
-    </div> <!-- .container -->
-</body>
+                    <% }) %>
+                        <!-- end forEach  -->
+            </div>
+        </div>  <!-- .container -->
+    </body>
+
 </html>
