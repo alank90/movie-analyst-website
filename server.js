@@ -56,6 +56,7 @@ app.get('/movies', getAccessToken, function (req, res) {
         .get('http://localhost:8080/movies')
         .set('Authorization', 'Bearer ' + req.access_token)
         .end(function (err, data) {
+            console.log(data.body);
             if (data.status == 401) {
                 res.status(401).send(err);
             } else {
@@ -73,6 +74,7 @@ app.get('/authors', getAccessToken, function (req, res) {
         .get('http://localhost:8080/reviewers')
         .set('Authorization', 'Bearer ' + req.access_token)
         .end(function (err, data) {
+            console.log(data.body);
             if (data.status == 401) {
                 res.status(401).send(err);
             } else {
